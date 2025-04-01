@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: spring-ai-audio-to-text
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      audio:
+        transcription:
+          base-url: https://api.openai.com
+          options:
+            model: whisper-1
+            response-format: json
+server:
+  port: 4242
